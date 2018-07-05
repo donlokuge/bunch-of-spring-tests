@@ -14,12 +14,21 @@ import com.beanmapping.beanmapping.beans3.Bean3;
 import com.beanmapping.beanmapping.configurationProperties.ComplexProp;
 import com.beanmapping.beanmapping.configurationProperties.GlobalProperties;
 import com.beanmapping.beanmapping.configurationProperties.GlobalPropertiesTest2;
+import com.beanmapping.beanmapping.configurationProperties.ymltests.YMLTest1;
 
 @SpringBootApplication
 public class BeanMappingApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = SpringApplication.run(BeanMappingApplication.class, args);
+		
+		String [] beans = applicationContext.getBeanDefinitionNames();
+		System.out.println("========== BEAN NAMES =========");
+		for(String name : beans) {
+			System.out.println(name);
+		}
+		
+		System.out.println("/n/n");
 
 		// AnnotationConfigApplicationContext applicationContext = new
 		// AnnotationConfigApplicationContext();
@@ -60,6 +69,10 @@ public class BeanMappingApplication {
 		System.out.println("======  Test complex egample ========");
 		ComplexProp complexProp = applicationContext.getBean("complexProp",ComplexProp.class);
 		System.out.println(complexProp);
+		
+		System.out.println("======  Test yml egample ========");
+		YMLTest1 ymlTest1 = applicationContext.getBean("YMLTest1",YMLTest1.class);
+		System.out.println(ymlTest1);
 		
 		
 		// applicationContext.close();

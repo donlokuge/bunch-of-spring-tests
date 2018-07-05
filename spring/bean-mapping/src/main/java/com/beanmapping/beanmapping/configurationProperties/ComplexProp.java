@@ -12,6 +12,10 @@ import com.beanmapping.beanmapping.configurationProperties.objects.Menu;
 @PropertySource("classpath:complex/c.properties")
 @ConfigurationProperties("app")
 public class ComplexProp {
+	
+	private String name;
+	private String email;
+	private int number;
 
 	
 	// does not auto inject here. will use setter method
@@ -22,10 +26,14 @@ public class ComplexProp {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+
 	@Override
 	public String toString() {
-		return "ComplexProp [menus=" + menus + "]";
+		return "ComplexProp [name=" + name + ", email=" + email + ", number=" + number + ", menus=" + menus + "]";
 	}
+
+
 
 	public List<Menu> getMenus() {
 		return menus;
@@ -35,6 +43,44 @@ public class ComplexProp {
 		System.out.println("ComplexProp setMenus is called");
 		this.menus = menus;
 	}
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+
+	public int getNumber() {
+		return number;
+	}
+
+
+
+	public void setNumber(int number) {
+		this.number = number;
+	}
+	
+	
 	
 	 
 }
