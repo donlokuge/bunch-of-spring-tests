@@ -14,7 +14,6 @@ import com.beanmapping.beanmapping.beans3.Bean3;
 import com.beanmapping.beanmapping.configurationProperties.ComplexProp;
 import com.beanmapping.beanmapping.configurationProperties.GlobalProperties;
 import com.beanmapping.beanmapping.configurationProperties.GlobalPropertiesTest2;
-import com.beanmapping.beanmapping.configurationProperties.ymltests.YMLTest1;
 
 @SpringBootApplication
 public class BeanMappingApplication {
@@ -66,13 +65,11 @@ public class BeanMappingApplication {
 		GlobalPropertiesTest2 test2 = applicationContext.getBean("globalPropertiesTest2", GlobalPropertiesTest2.class);
 		System.out.println(test2.getThreadPool());
 		
-		System.out.println("======  Test complex egample ========");
+		System.out.println("======  Test ComplexProperties example ========");
 		ComplexProp complexProp = applicationContext.getBean("complexProp",ComplexProp.class);
 		System.out.println(complexProp);
 		
-		System.out.println("======  Test yml egample ========");
-		YMLTest1 ymlTest1 = applicationContext.getBean("YMLTest1",YMLTest1.class);
-		System.out.println(ymlTest1);
+
 		
 		
 		// applicationContext.close();

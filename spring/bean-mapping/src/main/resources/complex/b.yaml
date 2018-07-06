@@ -1,8 +1,0 @@
-server:
-  email: default@don.com
-  port: 9080
-  ip: 10.0.0.1
- 
-endpoints:
-  - 1
-  - 32
