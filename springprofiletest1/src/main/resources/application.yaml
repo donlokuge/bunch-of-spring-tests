@@ -3,7 +3,16 @@ spring:
     active: "prod"
   main:
     banner-mode: "off"
-    
+
+name: dev-YAML
+environment: dev
+
+firebase:
+    name: don
+    last-name: lok
+    id: 12345
+
+
 ---
 spring:
     profiles: test

@@ -5,6 +5,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.example.demo.config.Firebase;
 import com.example.demo.config.YAMLConfig;
 
 @SpringBootApplication
@@ -12,6 +13,9 @@ public class Spingprofiletest1Application implements CommandLineRunner {
 
 	@Autowired
 	private YAMLConfig config;
+	
+	@Autowired
+	private Firebase firebase;
 
 	public static void main(String[] args) {
 		SpringApplication.run(Spingprofiletest1Application.class, args);
@@ -23,6 +27,7 @@ public class Spingprofiletest1Application implements CommandLineRunner {
     public void run(String... args) throws Exception {
         System.out.println(config.getEnvironment());
         System.out.println(config.getName());
+        System.out.println(firebase.getLastName());
     }
 
 }
