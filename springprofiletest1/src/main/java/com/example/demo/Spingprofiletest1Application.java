@@ -16,7 +16,7 @@ public class Spingprofiletest1Application implements CommandLineRunner {
 	public static void main(String[] args) {
 		SpringApplication.run(Spingprofiletest1Application.class, args);
 
-		System.out.println("");
+		System.out.println("https://www.mkyong.com/spring-boot/spring-boot-profile-based-properties-and-yaml-example");
 	}
 	
 	@Override
