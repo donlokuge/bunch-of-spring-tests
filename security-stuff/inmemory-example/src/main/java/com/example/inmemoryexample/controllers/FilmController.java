@@ -20,6 +20,9 @@ public class FilmController {
     @PostConstruct
     public void after(){
         films.add(new Film("1","Hp"));
+        films.add(new Film("12","ww2"));
+        films.add(new Film("3","cars"));
+
     }
 
     @GetMapping("/")
@@ -32,5 +35,11 @@ public class FilmController {
     @ResponseBody
     public Film getFilm(@PathVariable("id") String id){
         return films.get(0);
+    }
+
+    @GetMapping("/films")
+    @ResponseBody
+    public List<Film> getFilms(){
+        return films;
     }
 }
